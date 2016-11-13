@@ -1,0 +1,22 @@
+//Escreva  um  programa  que  leia  um  número  entre  1  e  12  e  escreva  o  mês correspondente.  
+//Ex:  Se  o  número  lido  for  2,  deverá  ser  mostrado  ao  usuário Fevereiro. 
+
+import java.util.Scanner;
+
+public class Mes {
+    String mes;
+    
+    void acharMes2(int x){
+        String []array={"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto",
+    "Setembro","Outubro","Novembro","Dezembro"};
+        this.mes = array[x-1];
+    }
+    public static void main(String[]args){
+        Scanner ler = new Scanner(System.in);
+        Mes c = new Mes();
+        System.out.println("Digite O Número De Um Mês:");
+        c.acharMes2(ler.nextInt());
+        System.out.println(c.mes);
+        
+    }
+}
